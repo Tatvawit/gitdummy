@@ -1,0 +1,56 @@
+{
+  "posts": [
+    {
+      "title": "Dynamic Component",
+      "task": "Conceptual work with different scenarios for dynamic component for 2 days",
+      "date": "2022-11-02",
+      "time": "09:00",
+      "priority": "High",
+      "id": 1
+    },
+    {
+      "title": "Charts js",
+      "task": "Apex and chart js with styling for all types and scenarios for 2 days",
+      "date": "2022-11-04",
+      "time": "",
+      "priority": "High",
+      "id": 2
+    },
+    {
+      "title": "Omnis voluptate vel ",
+      "task": "Quo beatae in sed ir",
+      "date": "2005-08-23",
+      "time": "05:57",
+      "priority": "Medium",
+      "id": 3
+    },
+    {
+      "title": "Nemo excepteur alias",
+      "task": "Reiciendis distincti",
+      "date": "1978-11-12",
+      "time": "21:41",
+      "priority": "Low",
+      "id": 4
+    },
+    {
+      "title": "Eligendi cumque quis",
+      "task": "Aliquid sint laborum",
+      "date": "1983-09-14",
+      "time": "21:02",
+      "priority": "Low",
+      "id": 5
+    },
+    {
+      "title": "Ipsum odit officia ",
+      "task": "Sunt at rerum nulla",
+      "date": "1993-01-03",
+      "time": "04:22",
+      "priority": "Low",
+      "id": 6
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}

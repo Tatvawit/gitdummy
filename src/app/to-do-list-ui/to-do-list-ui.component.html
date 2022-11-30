@@ -1,0 +1,82 @@
+<div class="background_ui">
+  <div class="header_ui">
+    <h1 class="heading">To Do List</h1>
+    <div class="search_ui">
+      <div class="px-1">
+        <img src="../../assets/search.svg" alt="searchIcon" class="icon_ui" >
+      </div>
+      <div class="w-full rounded-r-3xl">
+        <app-search  (childStringData)="Search($event)"></app-search>
+      </div>
+    </div>
+    <div class="flex justify-evenly">
+      <div>
+        <button class="p-1 "><img src="../../assets/filter.svg" alt="filterIcon" class="icon_ui "></button>
+      </div>
+      <div>
+        <button class="p-1" (click)="ToggleFunction();SortArray()">
+          <img src="../../assets/ascending.svg" alt="Sort_Icon" class="icon_ui2" [ngClass]="condition?'hide_data':''">
+          <img src="../../assets/dsc.svg" alt="Sort_Icon" class="icon_ui2" [ngClass]="condition?'':'hide_data'">
+        </button>
+      </div>
+      <div>
+        <button class="p-1" (click)="navigateToDoListForm()"><img src="../../assets/add.svg" alt="filterIcon" class="icon_ui"></button>
+      </div>
+    </div>
+  </div>
+  <div class="body_ui">
+    <div class="w-full bg-yellow-100 mb-4 flex" *ngFor="let data of TasktableArray" [ngClass]="show?'hide_data':''">
+      <h1 class="Title_heading">{{data.title}}</h1>
+      <button (click)="showTable()" class="px-2"><img src="../../assets/close.svg" alt="DropDownIcon" class="h-8 w-8"></button>
+    </div>
+    <table class="w-full mx-auto rounded-md" [ngClass]="show?'':'hide_data'">
+        <tr  class="bg-slate-400 rounded-t-md " >
+          <th class="tdata rounded-tl-md">Sr No.</th>
+          <th class="tdata">Title</th>
+          <th class="tdata">Date</th>
+          <th class="tdata ">Status</th>
+          <th class="tdata">DELETE</th>
+          <th class="tdata">UPDATE</th>
+          <th class="tdata rounded-tr-md">SHOW</th>
+
+        </tr>
+        <tr  class="odd:bg-slate-200 rounded-b-md text-center " *ngFor="let data of SortedArrayTable">
+          <td class="tdata1 rounded-bl-md">{{data.id}}</td>
+          <td class="tdata1">{{data.title}}</td>
+          <td class="tdata1">{{data.date}}</td>
+          <td class="tdata1 ">Pending</td>
+          <td class="tdata1">
+            <button class="deletebtn" (click)="deleteData(data.id)" >Delete</button>
+        </td>
+        <td class="tdata1 rounded-br-md">
+            <button class="updatebtn" routerLink="/ToDoListForm/{{data.id}}">Update</button>
+        </td>
+        <td>
+          <button (click)="showTaskData(data.id)"><img src="../../assets/chevron-down.svg" alt="DropDownIcon" class="h-4 w-6"></button>
+        </td>
+        </tr>
+    </table>
+
+    <div [ngClass]="show?'hide_data':''">
+      <table class="w-full mx-auto rounded-md">
+        <tr  class="bg-slate-400 rounded-t-md " >
+          <th class="tdata">Tasks</th>
+          <th class="tdata">Deadline</th>
+          <th class="tdata ">Status</th>
+        </tr>
+        <tr  class="odd:bg-slate-200 rounded-b-md text-center" *ngFor="let data of TasktableArray">
+          <td class="tdata1">{{data.task}}</td>
+          <td class="tdata1">{{data.time}}</td>
+          <td class="tdata1 ">Pending</td>
+        </tr>
+    </table>
+    </div>
+    <div>
+      <button (click)="page('pre')" class="btn" [disabled]="this.temp==0"[ngClass]="this.rowShow?'hide_data':''">&#8920;</button>
+      <button (click)="rows(5)" class="btn">5</button>
+      <button (click)="page('next')" class="btn" [disabled]="this.nextdummy!=0" [ngClass]="this.rowShow?'hide_data':''">&#8921;</button>
+    </div>
+  </div>
+</div>
+
+

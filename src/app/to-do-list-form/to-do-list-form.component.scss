@@ -1,0 +1,24 @@
+.background_ui{
+  @apply w-screen h-screen bg-gradient-to-br from-slate-600 to-gray-500 p-6;
+}
+
+.body_ui{
+  @apply w-11/12 mx-auto bg-gradient-to-br from-slate-300 to-slate-200  p-4 rounded-md;
+}
+
+.form_ui{
+  @apply w-full mx-auto px-4;
+}
+
+.inpt_bx{
+  @apply w-full ;
+}
+.lbl{
+  @apply text-xl font-normal uppercase;
+}
+.btn_bx{
+  @apply w-1/6 mx-auto mt-4;
+}
+.btn{
+  @apply w-full text-2xl text-white uppercase bg-sky-600 rounded-3xl p-2 font-semibold;
+}

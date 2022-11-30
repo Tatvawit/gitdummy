@@ -1,0 +1,50 @@
+.background_ui{
+  @apply w-screen h-screen bg-gradient-to-br from-slate-600 to-gray-500;
+}
+
+.header_ui{
+  @apply w-screen bg-gradient-to-br from-slate-400 to-slate-300 p-4 flex justify-between;
+}
+
+.heading{
+  @apply text-3xl font-medium uppercase text-blue-700 p-1;
+}
+
+.search_ui{
+  @apply flex bg-white w-1/6 p-1 rounded-3xl;
+}
+
+.icon_ui{
+  @apply h-8 w-8;
+}
+
+.search_feild{
+  @apply h-8 w-full rounded-r-3xl placeholder:text-xl px-2 placeholder:text-center focus:outline-none;
+}
+
+.body_ui{
+  @apply w-11/12 mx-auto bg-white mt-4 p-4 rounded-md;
+}
+
+.tdata{
+  @apply text-2xl text-slate-800 antialiased  p-2 uppercase;
+}
+
+.tdata1{
+  @apply text-xl text-slate-800 antialiased  p-2 ;
+}
+
+.hide_data{
+  @apply hidden;
+}
+.Title_heading{
+  @apply text-3xl font-semibold antialiased w-full uppercase text-center p-2 animate-bounce  text-slate-800;
+}
+
+.icon_ui2{
+  @apply h-9 w-9;
+}
+
+.btn{
+  @apply px-4 text-lg bg-green-400 rounded-md mx-2 my-2 font-medium;
+}

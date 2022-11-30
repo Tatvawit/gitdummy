@@ -1,0 +1,26 @@
+<div class="background_ui">
+  <div class="body_ui">
+    <form class="form_ui" [formGroup]="ToDoListForm" (ngSubmit)="AddData(ToDoListForm)">
+      <div class="inpt_bx">
+        <label for="title" class="lbl">Title</label>
+        <input type="text" placeholder="Enter the Title" class="w-full p-2 rounded-3xl border-2 border-slate-700" formControlName="title">
+      </div>
+      <div class="mt-4">
+        <label for="title" class="lbl">Task</label>
+        <input type="text" placeholder="Enter New Task" class="w-full p-2 rounded-3xl border-2 border-slate-700" formControlName="task">
+      </div>
+      <div class="mt-4 bg-inherit">
+        <input type="date" class=" w-5 scale-150 bg-inherit focus:outline-none hover:cursor-pointer" formControlName="date">
+        <select class="bg-inherit ml-4 focus:outline-none hover:cursor-pointer" formControlName="priority">
+          <option value="Low">Low</option>
+          <option value="Medium">Medium</option>
+          <option value="High">High</option>
+        </select>
+        <input type="time" class="w-7 scale-150 bg-inherit ml-4 focus:outline-none" formControlName="time">
+      </div>
+      <div class="btn_bx">
+        <button type="submit" class="btn">Submit</button>
+      </div>
+    </form>
+  </div>
+</div>
