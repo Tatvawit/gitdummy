@@ -9,6 +9,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { SearchComponent } from './search/search.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { RepoComponent } from './repo/repo.component';
+
 
 
 
@@ -17,7 +19,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppComponent,
     ToDoListUIComponent,
     ToDoListFormComponent,
-    SearchComponent
+    SearchComponent,
+    RepoComponent,
   ],
   imports: [
     BrowserModule,
